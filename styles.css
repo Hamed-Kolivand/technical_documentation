@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+  body{
+        font-size: 1em;
+        font-family: "Roboto Slab" , sans-serif;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    code{
+        display: block;
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+        background-color: rgba(170, 169, 169, 0.555);
+    }
+
+    #grid{
+        display: grid;
+        grid-template-columns: 25vw 75vw;
+        width: 100vw;
+        height: 100vh;
+    }
+    #navbar{
+        border-right: 3px solid rgba(0, 0, 0, 0.5);
+        background-color: rgba(207, 204, 204, 0.883);
+    }
+    #navbar > header{
+        text-align: center;
+        margin-top: 1rem;
+        padding-bottom: 15px;
+        font-size: 1.7em;
+        border-bottom: 1.5px solid black;
+    }
+
+    #topics > p{
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1.5px solid black;
+    }
+
+    #main-doc{
+        overflow-y: scroll;
+        z-index:0;
+        background-color:floralwhite;
+    }
+    #main-doc > section{
+        margin-left: 2em;
+        margin-top: 2em;
+    }
+    section > header{
+        font-size: 1.5em;
+      }
+      @media(max-width: 795px) {
+        #grid{
+           display: flex;
+           flex-direction: column;
+           height:fit-content;
+        }
+        #navbar{
+            border: none;
+            
+        }
+        #navbar > div{
+            background-color: white;
+            overflow-y: scroll;
+            max-height: 145px;
+            border: 2px solid black;
+            margin: 0;
+            padding: 0;
+        }
+        #topics > p {
+            padding: 0;
+            margin: 0;
+        }
+        #main-doc{
+            overflow-y:hidden;
+        }
+        body{
+            font-size: 0.9em;
+        }
+    }
+    
+    @media(max-width: 480px) {
+       
+      #navbar {
+        font-size: 1em;
+      }
+      #topics > p{
+        font-size: .8em;
+      }
+    }
